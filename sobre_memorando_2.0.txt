@@ -1,0 +1,9 @@
+
+Memorando 2.0 Turbo
+---------------------------------------------------------------------------------------------
+Atualização do sistema de Memorando antigo em PHP 5 para PHP 8.3.35 e Laravel 13.36.0
+
+Implementações:
+
+
+ 
