@@ -8,6 +8,7 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+// Rotas de Login
 Route::middleware('auth')->group(function () {
     Route::get('/trocar-senha', [AuthController::class, 'showPasswordChangeForm'])->name('password.change');
     Route::post('/trocar-senha', [AuthController::class, 'updatePassword'])->name('password.update');
