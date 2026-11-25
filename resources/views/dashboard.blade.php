@@ -203,24 +203,26 @@
         </a>
 
         <!-- 2. Usuários (btn-info no legado) -->
-        <a class="cl-action-card cl-action-card--ponto" href="#" title="Usuários">
-          <div class="cl-action-card__icon-wrap">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <div class="cl-action-card__body">
-            <span class="cl-action-card__tag">Administração &middot; Usuários</span>
-            <h3 class="cl-action-card__title">
-              <span>Usuários</span>
-              <svg class="cl-action-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </h3>
-            <p class="cl-action-card__desc">Acesse a edição de usuários.</p>
-          </div>
-        </a>
+        @can('manage-users') 
+          <a class="cl-action-card cl-action-card--ponto" href="{{ route('users.index') }}" title="Usuários">
+            <div class="cl-action-card__icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="cl-action-card__body">
+              <span class="cl-action-card__tag">Administração &middot; Usuários</span>
+              <h3 class="cl-action-card__title">
+                <span>Usuários</span>
+                <svg class="cl-action-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </h3>
+              <p class="cl-action-card__desc">Acesse a edição de usuários.</p>
+            </div>
+          </a>
+        @endcan  
 
         <!-- 3. Criar memorando (btn-primary no legado) -->
         <a class="cl-action-card cl-action-card--criar" href="#" title="Criar memorando">
